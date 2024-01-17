@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c50b12ef33.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="" class="logo">
+            <ul>
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#studentlife">My Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content-wrapper">
+            <div class="photo">
+                <img src="images/developer_4661318.png" alt="Developer Photo" class="photo-img">
+            </div>
+            <div class="header-text">
+                <h1>Hi, It's Ainur
+                    <br>I'm a Junior Web Developer </h1>
+                    <p>Welcome to my portfolio!</p><br>
+                <p>
+                    <a href="#about" class="btn">More about me</a>
+                    <a href="pdf/Жалмагамбетова Айнур CV (1).pdf" download=""   class="btn">Download CV</a>
+                </p>    
+            </div>
+        </div>
+    </div> 
+</div>
+<!-------about------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/photo1704967095 (1).jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1><br>
+                <p class="about-text">Greetings! I am a student specializing in software development. My interest in technology and desire to create innovative solutions have led me into the world of development, where I study and strive for constant growth. My experience includes working with various programming languages, as well as participating in projects aimed at creating innovative and effective software solutions.
+                    Here, in my portfolio, you will find examples of my projects that I developed during the training process. If you have interesting tasks or projects that I can join, I will be happy to discuss possible cooperation.</p><br>
+                <div class="tab-title">
+                    <p class="tab-links active-link" onclick="opentab('AITU iCode')">Skills</p>
+                    <p class="tab-links" onclick="opentab('AITUOPEN')" >Education</p>
+                    <p class="tab-links" onclick="opentab('AITU Stories')">Courses</p>
+                </div>
+                <div class="tab-contents active-tab" id="AITU iCode">
+                    <ul>
+                        <li>MySQL, SQLite, PostgreSQL (Backend)</li>
+                        <li>Python, Django (Backend)</li>
+                        <li>HTML, CSS, JS, React, jQuery (Frontend)</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="AITUOPEN">
+                    <ul>
+                        <li><span>2013 - 2022</span><br> Secondary Education (Grades 1-9)</li>
+                        <li><span>2022 - 2025</span><br> College of Astana IT University LLP <br> Specialty - Software Developer </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="AITU Stories">
+                    <ul>
+                        <li>Python Programming (Stepik)</li>
+                        <li>JavaScript for Beginners (Stepik)</li>
+                        <li>Web development for beginners: HTML and CSS (Stepik)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!----------My Work------>
+<div id="studentlife">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="life-list">
+            <div class="life">
+                <img src="images/photo1705448035 (1).jpeg">
+                <div class="layer">
+                    <a href="https://github.com/tnrsslk/SnapGuard"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="life">
+                <img src="images/photo1705447758.jpeg">
+                <div class="layer">
+                    <a href="https://tnrsslk.github.io/"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="life">
+                <img src="images/photo1705448198 (1).jpeg">
+                <div class="layer">
+                    <a href="https://github.com/tnrsslk/Oasis"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!---------Contact------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sup-title">Contact</h1>
+                <p><i class="fa-solid fa-phone"></i>+7 775 361 4576</p>
+                <div class="social-icons">
+                    <a href="https://github.com/tnrsslk"><i class="fab fa-github"></i></a>
+                    <a href="https://t.me/vbmzm"><i class="fab fa-telegram"></i></a>
+                    <a href="https://www.linkedin.com/in/ainur-z-6213002a9/"><i class="fab fa-linkedin"></i></a>   
+                    <a href="https://www.instagram.com/tnrsslk?igsh=MWptc2R1ZGh1dGpz&utm_source=qr"><i class="fab fa-instagram"></i></a>                 
+                </div>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    
+</script>
+</body>
+</html>
